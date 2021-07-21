@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Teste.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Audição</h1>
+    <table>
+        <tr>
+            <td id="imagens">
+                <ul id="iconesImagens">
+                    <li id="icone1imagens" onclick="icone1()">
+                            <img src="/img/bell.png">
+                    </li>
+                    <li id="icone2imagens" onclick="icone2()">
+                            <img src="/img/cat.png">
+                    </li>
+                    <li id="icone3imagens" onclick="icone3()">
+                            <img src="/img/royal-crown.png">
+                    </li>
+                    <li id="icone4imagens" onclick="icone4()">
+                            <img src="/img/palm-of-hand.png">
+                    </li>
+                    <li id="icone5imagens" onclick="icone5()">
+                            <img src="/img/car.png">
+                    </li>
+                    <li id="icone6imagens" onclick="icone6()">
+                            <img src="/img/tree-silhouette.png">
+                    </li>
+                    <li id="icone7imagens" onclick="icone7()">
+                            <img src="/img/dog.png">
+                    </li>
+                    <li id="icone8imagens" onclick="icone8()">
+                            <img src="/img/books-stack-of-three.png">
+                    </li>
+                    <li id="icone9imagens" onclick="icone9()">
+                            <img src="/img/chair.png">
+                    </li>
+                </ul>
+            </td>
+            <td id="numeros">
+                <ul id="iconesNumericos">
+                    <li id="icone1numeros" onclick="icone1()">
+                            <img src="/img/one.png">
+                    </li>
+                    <li id="icone2numeros" onclick="icone2()">
+                            <img src="/img/two.png">
+                    </li>
+                    <li id="icone3numeros" onclick="icone3()">
+                            <img src="/img/three.png">
+                    </li>
+                    <li id="icone4numeros" onclick="icone4()">
+                            <img src="/img/four.png">
+                    </li>
+                    <li id="icone5numeros" onclick="icone5()">
+                            <img src="/img/five.png">
+                    </li>
+                    <li id="icone6numeros" onclick="icone6()">
+                            <img src="/img/six.png">
+                    </li>
+                    <li id="icone7numeros" onclick="icone7()">
+                            <img src="/img/seven.png">
+                    </li>
+                    <li id="icone8numeros" onclick="icone8()">
+                            <img src="/img/eight.png">
+                    </li>
+                    <li id="icone9numeros" onclick="icone9()">
+                            <img src="/img/nine.png">
+                    </li>
+                </ul>
+            </td>
+            <td id="options">
+                <h2>Selecione os ícones que combinam com as 3 palavras que você ouviu</h2>
+                <br><br><br><br>
+                <h3>Clique abaixo e escute os últimos sons novamente</h3>
+                <button id="refresh" onclick="repeatSound()"><img src="/img/refresh.png"></button>
+            </td>
+        </tr>
+    </table>   
+    <audio src="/videos/teste/CarroCaoArvNV1E.mp3" id="PNV1E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/MaoArvCarrNV2E.mp3" id="PNV2E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/ArvLivCaoNV3E.mp3" id="PNV3E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/GatoArvSinoNV4E.mp3" id="PNV4E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/SinoCadeiraNV5E.mp3" id="PNV5E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/537NV1E.mp3" id="NNV1E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/648NV2E.mp3" id="NNV2E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/268NV3E.mp3" id="NNV3E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/863NV4E.mp3" id="NNV4E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/657NV5E.mp3" id="NNV5E" type="audio/mp3"></audio>
+    <audio src="/videos/teste/SinoCadeiraGatoNV1D.mp3" id="PNV1D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/CadeiraMaoLivNV2D.mp3" id="PNV2D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/ArvLivCaoNV3D.mp3" id="PNV3D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/GatoArvSinoNV4D.mp3" id="PNV4D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/CarroMaoArvNV5D.mp3" id="PNV5D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/537NV1D.mp3" id="NNV1D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/324NV2D.mp3" id="NNV2D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/435NV3D.mp3" id="NNV3D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/372NV4D.mp3" id="NNV4D" type="audio/mp3"></audio>
+    <audio src="/videos/teste/657NV5D.mp3" id="NNV5D" type="audio/mp3"></audio>
+
+    <audio src="/videos/teste/MaoArvCarrosNV1.mp3" id="PNV1" type="audio/mp3"></audio>
+    <audio src="/videos/teste/CarrosCaoArvNV2.mp3" id="PNV2" type="audio/mp3"></audio>
+    <audio src="/videos/teste/ArvLivCaoNV3.mp3" id="PNV3" type="audio/mp3"></audio>
+    <audio src="/videos/teste/MaoReiCarrosNV4.mp3" id="PNV4" type="audio/mp3"></audio>
+    <audio src="/videos/teste/CarrosMaoArvNV5.mp3" id="PNV5" type="audio/mp3"></audio>
+    <audio src="/videos/teste/283NV1.mp3" id="NNV1" type="audio/mp3"></audio>
+    <audio src="/videos/teste/857NV2.mp3" id="NNV2" type="audio/mp3"></audio>
+    <audio src="/videos/teste/752NV3.mp3" id="NNV3" type="audio/mp3"></audio>
+    <audio src="/videos/teste/863NV4.mp3" id="NNV4" type="audio/mp3"></audio>
+    <audio src="/videos/teste/483NV5.mp3" id="NNV5" type="audio/mp3"></audio>
+
+
+    
+    <script src="Teste.js"></script>
+</body>
+</html>

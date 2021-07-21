@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="fonesDeOuvido.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="voltar">
+        <a href="../../selecionarAudio.html"><img src="/img/arrow-left-circle.svg" id="voltarIcone">&nbsp;Voltar</a>
+    </div>
+    <h3>Por favor, selecione o volume a um nível confortável</h3>
+    <div>
+        <img src="/img/headphones.svg" id="foneDeOuvido">
+    </div>
+    <div id="displayControls">
+        <ul>
+            <li><button onclick="diminuirVolume()">-</button></li>
+                <li>
+                    <ul id="volumeLevel">
+                        <li><img src="/img/square.svg" id="volumeLevel1"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel2"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel3"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel4"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel5"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel6"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel7"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel8"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel9"></li>
+                        <li><img src="/img/square.svg" id="volumeLevel10"></li>
+                    </ul>
+                </li>
+            <li><button onclick="aumentarVolume()">+</button></li>
+        </ul>
+    </div>
+    <a href="/Teste/PreTeste.html"><button id="continuar">Clique aqui para <br> continuar</button></a>
+        <p><strong>Por favor, use os botões - (a esquerda) e + (a direita) para selecionar o nível de volume mais confortável</strong></p>
+    <audio id="foneDireito">
+        <source src="/videos/VolumeTest-FoneDireito.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="foneEsquerdo">
+        <source src="/videos/VolumeTest-FoneEsquerdo.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="fonesDeOuvido.js"></script>
+</body>
+</html>

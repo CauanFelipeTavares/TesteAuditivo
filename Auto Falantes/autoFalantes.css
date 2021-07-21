@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding:0px;
+}
+#foneDeOuvido {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+}
+
+#voltarIcone {
+    zoom:100%;
+}
+
+#displayControls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+#displayControls button {
+    background-color: rgba(128, 128, 128, 0.05);
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 5vh;
+    text-align: center;
+    padding: 1vh 6vh;
+    font-weight: 500;
+}
+
+#displayControls ul li {
+    display: inline-block;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+
+
+
+h3, p {
+    text-align: center;
+}
+
+h3 {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+
+#voltar {
+    margin-left: 3vh;
+    margin-top: 3vh;
+    font-size: 4vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#continuar {
+    display: block;
+    margin: 3vh auto;
+    font-size: 3vh;
+    padding: 1vh;
+    border: rgb(1, 41, 1) 2px solid;
+    background-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+}
+
+#continuar:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}

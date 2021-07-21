@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    margin-left: 10vw;
+    font-size: 1.5vw;
+    margin-right: 10vw;
+    margin-bottom: 1.5vw;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 5vh 0vh 10vh 0vh;
+}
+
+h2 {
+    font-size: 5vw;
+}
+
+h3 {
+    font-size: 2vw;
+}
+
+button {
+    display: block;
+    margin: 10vh auto 0vh auto;
+    font-size: 1.5vw;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+

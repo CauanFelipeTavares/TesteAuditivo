@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 5vh 0vh;
+    padding: 5vh 0vh;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+img {
+    zoom: 0.15;
+    padding: 5vw;
+    cursor: pointer;
+}
+
+li {
+    display: inline-block;
+    margin: 1vw;
+    border: 3px solid white;
+}
+
+ul {
+    margin: 0vw;
+    width: 30vw;
+}
+
+table {
+    margin: 0vw 10vw;
+}
+
+#options {
+    width: 40%;
+    border-left: 5px solid black;
+    padding: 1vw 5vw;
+}
+
+#options h2, #options h3 {
+    text-align: center;
+}
+
+#refresh {
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    border: 1px solid white;
+}
+
+#refresh:active {
+    border: 1px solid black;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#iconesImagens, #iconesNumericos {
+    width: 40vw;
+}
+
+@media only screen and (max-width: 871px){
+    table {
+    margin: 0px;
+    }
+    #iconesImagens, #iconesNumericos {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 692px){
+    table {
+    margin: 0px;
+    }
+    #iconesImagens, #iconesNumericos {
+        width: 100%;
+    }
+}
+
+#teste  {
+    border: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
