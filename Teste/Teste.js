@@ -100,27 +100,27 @@ const NNV5E = {
 }
 
 const PNV1D = {
-    audio: document.getElementById('PNV1E'),
+    audio: document.getElementById('PNV1D'),
     opcoes: [1 , 2, 9]
 }
 
 const PNV2D = {
-    audio: document.getElementById('PNV1E'),
+    audio: document.getElementById('PNV2D'),
     opcoes: [4 , 5, 8]
 }
 
 const PNV3D = {
-    audio: document.getElementById('PNV1E'),
+    audio: document.getElementById('PNV3D'),
     opcoes: [6 , 7, 8]
 }
 
 const PNV4D = {
-    audio: document.getElementById('PNV1E'),
+    audio: document.getElementById('PNV4D'),
     opcoes: [1 , 2, 6]
 }
 
 const PNV5D = {
-    audio: document.getElementById('PNV1E'),
+    audio: document.getElementById('PNV5D'),
     opcoes: [4 , 5, 6]
 }
 
@@ -210,8 +210,6 @@ if(audioModo == 'autoFalantes'){
     var audios = [PNV1,PNV2,PNV3,PNV4,PNV5,NNV1,NNV2,NNV3,NNV4,NNV5]
 }
 
-console.log(audios)
-console.log(audioModo)
 
 var errosEmSequencia = 0
 
@@ -230,13 +228,10 @@ function icone1() {
         document.getElementById('icone1' + iconOptions).style.border = '3px solid transparent'
         selectedOptions--
         SelectIcon1.value = false
-        console.log(SelectIcons.value)
     }else{
         document.getElementById('icone1' + iconOptions).style.border = '3px solid black'
         selectedOptions++
         SelectIcon1.value = true
-        console.log(SelectIcons)
-        console.log(SelectIcon1.value)
         verifyOptionsNumber()
     }
 }
@@ -363,6 +358,7 @@ function verifyOptionsNumber () {
     }
 }
 
+
 function resetOptions () {
     for(i=1; i<10; i++){
         document.getElementById('icone' + i + 'imagens').style.border = '3px solid white'
@@ -375,6 +371,17 @@ function repeatSound() {
 }
 
 function verifyAnwers () {
+
+    if(audios.length == 1){
+        console.log('final')
+        if(relacaoAcertosQuantidade < 0.34){
+            window.location.href = '/Teste/resultadoVermelho.html'
+        }else if(relacaoAcertosQuantidade < 0.67){
+            window.location.href = '/Teste/resultadoAmarelo.html'
+        }else{
+            window.location.href = '/Teste/resultadoVerde.html'
+        }
+    }
     var erros = 0
     for(i=0;i<9;i++){
         for(x=0;x<3;x++){
@@ -387,6 +394,7 @@ function verifyAnwers () {
                     erros++
                     errosTotal++
                     console.log(erros)
+                    console.log(errosTotal)
                 }
             }
         }
@@ -397,17 +405,25 @@ function verifyAnwers () {
     }else{
         errosEmSequencia = 0
     }
+    audios.shift()
     if(errosEmSequencia == 2){
-        console.log('1teste')
+        console.log('erros em sequencia')
         errosEmSequencia = 0
         while(audios.length % 5 != 0){
             audios.shift()
             console.log(audios.length)
+            errosTotal = errosTotal + 3
+            console.log(errosTotal)
         }
-        acertos = acertos/2
     }
-    audios.shift()
-    etapa = 20 - audios.length
+    if(audioModo == 'fonesDeOuvido'){
+        etapa = 20 - audios.length
+    }
+    if(audioModo == 'autoFalantes'){
+        etapa = 10 - audios.length
+    }
+
+    console.log(audios.length)
     console.log(etapa)
 
     var relacaoAcertosQuantidade = acertos/(acertos + errosTotal)
@@ -417,20 +433,10 @@ function verifyAnwers () {
 function nextQuestion () {
     console.log(audios)
     repeatSound()
-    console.log(etapa)
     if(etapa != 1){
-        if((etapa - 1) % 5 == 0){
-            console.log('etapa')
+        if(etapa % 5 == 0){
+            console.log('Numeros ou Imagens')
             switchIcons()
-        }
-    }
-    if(audios.length == 0){
-        if(relacaoAcertosQuantidade < 0.34){
-            window.location.href = '/Teste/resultadoVermelho.html'
-        }else if(relacaoAcertosQuantidade < 0.67){
-            window.location.href = '/Teste/resultadoAmarelo.html'
-        }else{
-            window.location.href = '/Teste/resultadoVerde.html'
         }
     }
 }
