@@ -1,6 +1,8 @@
 var audioModo = localStorage.getItem('audioModo')
 var volume = localStorage.getItem('volume')
 
+var FrelacaoAcertosQuantidade = 0
+
 document.getElementById('numeros').style.display = 'none'
 
 var iconOptions = 'imagens'
@@ -367,21 +369,12 @@ function resetOptions () {
 }
 
 function repeatSound() {
+    if(audios.length > 0){
     audios[0].audio.play()
+    }
 }
 
 function verifyAnwers () {
-
-    if(audios.length == 1){
-        console.log('final')
-        if(relacaoAcertosQuantidade < 0.34){
-            window.location.href = '/Teste/resultadoVermelho.html'
-        }else if(relacaoAcertosQuantidade < 0.67){
-            window.location.href = '/Teste/resultadoAmarelo.html'
-        }else{
-            window.location.href = '/Teste/resultadoVerde.html'
-        }
-    }
     var erros = 0
     for(i=0;i<9;i++){
         for(x=0;x<3;x++){
@@ -389,17 +382,15 @@ function verifyAnwers () {
             if(SelectIcons[i].id == id){
                 if(SelectIcons[i].value == true){
                     acertos++
-                    console.log(acertos)
+                    console.log('acertos: '+acertos)
                 }else{
                     erros++
                     errosTotal++
-                    console.log(erros)
-                    console.log(errosTotal)
+                    console.log('erros: ' + errosTotal)
                 }
             }
         }
     }
-    console.log(errosEmSequencia)
     if(erros == 3){
         errosEmSequencia++
     }else{
@@ -413,7 +404,7 @@ function verifyAnwers () {
             audios.shift()
             console.log(audios.length)
             errosTotal = errosTotal + 3
-            console.log(errosTotal)
+            console.log('erros: ' + errosTotal)
         }
     }
     if(audioModo == 'fonesDeOuvido'){
@@ -423,20 +414,29 @@ function verifyAnwers () {
         etapa = 10 - audios.length
     }
 
-    console.log(audios.length)
-    console.log(etapa)
+    console.log('quantidade de audios: ' + audios.length)
+    console.log('etapa numero ' + etapa)
 
-    var relacaoAcertosQuantidade = acertos/(acertos + errosTotal)
-    console.log('AQUI: ' + relacaoAcertosQuantidade)
+    relacaoAcertosQuantidade = acertos/(acertos + errosTotal)
+    console.log('porcentagem de acertos: ' + relacaoAcertosQuantidade)
 }
 
 function nextQuestion () {
-    console.log(audios)
     repeatSound()
     if(etapa != 1){
         if(etapa % 5 == 0){
-            console.log('Numeros ou Imagens')
             switchIcons()
+        }
+    }
+    if(audios.length < 2){
+        console.log('final')
+        console.log(relacaoAcertosQuantidade)
+        if(relacaoAcertosQuantidade < 0.34){
+            window.location.href = '/Teste/resultadoVermelho.html'
+        }else if(relacaoAcertosQuantidade < 0.67){
+            window.location.href = '/Teste/resultadoAmarelo.html'
+        }else{
+            window.location.href = '/Teste/resultadoVerde.html'
         }
     }
 }
