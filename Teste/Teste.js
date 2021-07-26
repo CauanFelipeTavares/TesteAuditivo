@@ -431,9 +431,9 @@ function nextQuestion () {
     if(audios.length < 2){
         console.log('final')
         console.log(relacaoAcertosQuantidade)
-        if(relacaoAcertosQuantidade < 0.34){
+        if(relacaoAcertosQuantidade < 0.4){
             window.location.href = '/Teste/resultadoVermelho.html'
-        }else if(relacaoAcertosQuantidade < 0.67){
+        }else if(relacaoAcertosQuantidade < 0.8){
             window.location.href = '/Teste/resultadoAmarelo.html'
         }else{
             window.location.href = '/Teste/resultadoVerde.html'
