@@ -34,6 +34,7 @@
     text-align: center;
     padding: 1vh 6vh;
     font-weight: 900;
+    margin: 0 10px;
 }
 
 @media only screen and (max-width: 621px){
