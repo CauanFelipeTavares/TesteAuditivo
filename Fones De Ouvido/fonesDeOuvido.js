@@ -1,7 +1,7 @@
 const audioDireito = document.getElementById('foneDireito')
 const audioEsquerdo = document.getElementById('foneEsquerdo')
 
-var time = 4
+var time = 6
 
 localStorage.setItem("audioModo", "fonesDeOuvido")
 audioEsquerdo.volume = 0.5
@@ -11,6 +11,7 @@ var visualVolume = 5
 
 diminuirVolume()
 aumentarVolume()
+audioEsquerdo.play()
 setInterval(() => {
     if(time % 10 == 0){
         audioDireito.play()

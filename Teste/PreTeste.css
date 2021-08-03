@@ -6,7 +6,7 @@
 
 li {
     margin-left: 10vw;
-    font-size: 1.5vw;
+    font-size: 1em;
     margin-right: 10vw;
     margin-bottom: 1.5vw;
 }
@@ -17,17 +17,17 @@ h2, h3 {
 }
 
 h2 {
-    font-size: 5vw;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 1.3em;
 }
 
 button {
     display: block;
-    margin: 10vh auto 5vh auto;
-    font-size: 1.5vw;
+    margin: 5vh auto 2.5vh auto;
+    font-size: 1.2em;
     padding: 1vw;
     cursor: pointer;
 }

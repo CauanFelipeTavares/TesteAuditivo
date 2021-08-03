@@ -17,7 +17,7 @@
         }
         
         img {
-            zoom: 0.5;
+            zoom: 0.4;
         }        
         table tr {
             display: flex;
@@ -25,14 +25,14 @@
             width: 97vw;
         }
         td {
-            margin: auto 0;
+            margin: auto 2vw;
         }
         h2 {
             text-align: center;
         }
         p {
             text-align:left;
-            margin: 0 30vw;
+            margin: 0 10vw;
         }
         button {
             display: block;
@@ -48,17 +48,21 @@
             color: white;
             cursor: pointer;
         }
+
+        #subtitulo {
+            text-align: center;
+        }
     </style>
 <body>
     <table>
         <tr>
-            <td style="color: green; font-size: 2vw;">
+            <td style="color: green; font-size: 1em;">
                 Nenhuma perda auditiva
             </td>
             <td>
                 <img src="/img/velocimetroVerde.png">
             </td>
-            <td style="color: red; font-size: 2vw;">
+            <td style="color: red; font-size: 1em;">
                 Possível perda auditiva
             </td>
         </tr>
@@ -67,8 +71,8 @@
     <h2>
         Seu resultado
     </h2>
-    <p><strong>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O teste de audição indica que você não possui uma perda auditiva.<br><br>
+    <p id="subtitulo"><strong>
+        O teste de audição indica que você não possui uma perda auditiva.<br><br>
     </strong></p>
     <p>
         Para um diagnóstico mais concreto, nós sugerimos que você busque um fonoaudiólogo. Você pode achar um fonoaudiólogo próximo a você clicando no item 'Encontre um audiologista'.

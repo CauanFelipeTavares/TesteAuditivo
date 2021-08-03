@@ -5,8 +5,8 @@
 }
 
 #foneDeOuvido {
-    width: 200px;
-    height: 200px;
+    width: 10em;
+    height: 10em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -28,10 +28,12 @@
     background-color: rgba(128, 128, 128, 0.05);
     border: 1px solid black;
     cursor: pointer;
-    font-size: 5vh;
+    font-size: 1em;
+    width: 4.5em;
+    height: 3em;
     text-align: center;
     padding: 1vh 6vh;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 #displayControls ul li {

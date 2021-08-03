@@ -1,6 +1,6 @@
 const audio = document.getElementById('audio')
 
-var time = 4
+var time = 6
 
 localStorage.setItem("audioModo", "autoFalantes")
 audio.volume = 0.5
@@ -9,8 +9,10 @@ var visualVolume = 5
 
 diminuirVolume()
 aumentarVolume()
+audio.play()
 setInterval(() => {
     if(time % 5 == 0){
+        console.log('teste2')
         audio.play()
     }
 
