@@ -36,6 +36,19 @@
     font-weight: 900;
 }
 
+@media only screen and (max-width: 621px){
+    #displayControls ul {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #displayControls ul li button {
+        margin-bottom: 15px;
+    }
+    #volumeLevel li {
+        margin: 3px 0;
+    }
+}
+
 #displayControls ul li {
     display: inline-block;
     padding-right: 1vw;
