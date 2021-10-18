@@ -75,12 +75,27 @@ button {
     }
 }
 
-@media only screen and (max-width: 692px){
-    table {
-    margin: 0px;
+@media only screen and (max-width: 768px){
+    tr {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     }
     #iconesImagens, #iconesNumericos {
         width: 100%;
+    }
+    #options {
+        border: transparent;
+        border-bottom: 5px solid black;
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 20px;
+    }
+    #imagens, #numeros {
+        margin: 5em;
+    }
+    #iconesImagens, #iconesNumericos {
+        zoom: 0.9;
     }
 }
 
